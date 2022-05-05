@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/fransız_mavisi"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/yazi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="@string/e_dam"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+
+        />
+
+    <Button
+        android:id="@+id/kayit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/bitıkkoyu"
+        android:text="@string/yeni_hesap_olustur"
+
+
+        />
+
+    <Button
+        android:id="@+id/giris"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/bitıkkoyu"
+        android:text="@string/hesabim_var"
+
+
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yazi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/ACIK_MAVİ1"
+        android:src="@drawable/imza" />
+
+
+
+
+</RelativeLayout>

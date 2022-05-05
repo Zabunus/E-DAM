@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GirisActivity"
+    >
+
+    <include
+        android:id="@+id/toolbargiris"
+        layout="@layout/toolbar2" />
+
+    <TextView
+
+        android:id="@+id/txtgirisG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbargiris"
+        android:layout_marginTop="50dp"
+        android:text="Hesabınızla Giriş Yapın"
+        android:textSize="23dp"
+
+        />
+
+    <TextView
+        android:id="@+id/girismailG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtgirisG"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="50sp"
+        android:text="E-mail"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/mailgirisG"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/girismailG"
+        android:layout_marginStart="5sp"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50sp"
+        android:hint="E-mail "
+        android:inputType="textEmailAddress"
+         />
+    <TextView
+        android:id="@+id/txtsifreG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/girismailG"
+        android:layout_marginTop="50dp"
+        android:text="Şifre"
+        android:textSize="23dp"
+        android:layout_marginStart="5sp"
+        android:layout_marginEnd="50sp"
+
+        />
+
+    <EditText
+        android:id="@+id/sifregirisG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtsifreG"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50sp"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+
+        />
+
+    <Button
+        android:id="@+id/btnGirisG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sifregirisG"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="@color/ACIK_MAVİ1"
+
+
+        android:text="GİRİŞ YAP"
+        app:cornerRadius="@dimen/browser_actions_context_menu_max_width"
+
+        />
+
+</RelativeLayout>

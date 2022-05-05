@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kayitActivity">
+
+    <include
+        android:id="@+id/toolbarkayit"
+        layout="@layout/toolbar2" />
+
+
+    <TextView
+        android:id="@+id/hesapolstr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarkayit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Yeni hesap oluştur."
+        android:textSize="30dp"
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hesapolstr"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="35dp"
+        android:text="Kullanıcı adı"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+
+
+        />
+
+    <EditText
+
+        android:id="@+id/txtkullaniciK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarkayit"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="50sp"
+        android:hint="@string/kullaniciadi" />
+
+
+    <EditText
+
+        android:id="@+id/txtsifreK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtkullaniciK"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50sp"
+        android:hint="ŞİFRE"
+        android:inputType="textPassword" />
+
+
+    <EditText
+
+        android:id="@+id/txtmailK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtsifreK"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="50sp"
+        android:hint="mail"
+        android:inputType="textEmailAddress"
+
+
+
+        />
+
+    <Button
+        android:id="@+id/btnkayitK"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtsifreK"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="60dp"
+
+        android:backgroundTint="@color/ACIK_MAVİ1"
+        android:text="KAYDI TAMAMLA"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/browser_actions_context_menu_max_width"
+
+
+        />
+
+
+</RelativeLayout>

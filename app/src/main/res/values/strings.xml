@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">E-DAM</string>
+    <string name="yeni_hesap_olustur">YENİ HESAP OLUŞTUR</string>
+    <string name="hesabim_var">HESABIM VAR</string>
+    <string name="e_dam">E-DAM</string>
+    <string name="kullaniciadi">Kullanıcı adı</string>
+    <string name="hesapolustur">YENİ HESAP OLUŞTUR</string>
+    <string name="kulllaniciadi">Kullanıcı adı</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
