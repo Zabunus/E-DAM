@@ -15,13 +15,14 @@
        android:id="@+id/appbarlayout"
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
-<include layout="@layout/toolbar2" android:id="@+id/toolbar"/>
+<include layout="@layout/toolbar_main" android:id="@+id/toolbar"/>
 
        <com.google.android.material.tabs.TabLayout
            android:id="@+id/tabsMain"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:backgroundTint="@color/fransız_mavisi"
+
 
            app:tabIndicatorColor="@color/mavi">
        </com.google.android.material.tabs.TabLayout>

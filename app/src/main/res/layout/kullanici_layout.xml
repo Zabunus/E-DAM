@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/kullaniciLayout"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/kullaniciAdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İsim"
+            android:fontFamily="sans-serif-black"
+            />
+
+        <TextView
+            android:id="@+id/sonMesaj"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SonMesaj"
+            android:fontFamily="sans-serif"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/onaylaBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@id/reddetBtn"
+        android:text="Onayla"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/reddetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Reddet"
+        android:visibility="gone"/>
+
+</RelativeLayout>

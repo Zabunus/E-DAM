@@ -10,10 +10,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TableLayout;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -30,8 +35,24 @@ public class MainActivity2 extends AppCompatActivity {
         aktifKullanici = auth.getCurrentUser();
         action=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(action);
-        getSupportActionBar().setTitle(R.string.app_name);
         vpMain =(ViewPager) findViewById(R.id.vpMain);
+        TextView kAdiBaslik = findViewById(R.id.kAdiBaslik);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        if (aktifKullanici != null){
+
+            FirebaseDatabase.getInstance().getReference(Veritabani.kullanicilar).child(aktifKullanici.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Kullanicilar kullanicilar = snapshot.getValue(Kullanicilar.class);
+                    kAdiBaslik.setText(kullanicilar.kullaniciAdi);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+        }
         tabsAdapter =new tabsadapter(getSupportFragmentManager());
         vpMain.setAdapter(tabsAdapter);
 
@@ -85,5 +106,17 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Ozellikler.cevrimiciDurumunuDegistir(false);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Ozellikler.cevrimiciDurumunuDegistir(true);
     }
 }

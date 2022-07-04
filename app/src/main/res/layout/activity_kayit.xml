@@ -18,24 +18,13 @@
         android:layout_below="@+id/toolbarkayit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:text="Yeni hesap oluştur."
+        android:fontFamily="sans-serif-black"
+        android:text="YENİ HESAP OLUŞTUR"
         android:textSize="30dp"
 
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hesapolstr"
-        android:layout_marginStart="5sp"
-        android:layout_marginTop="35dp"
-        android:text="Kullanıcı adı"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-
 
         />
+
 
     <EditText
 
@@ -43,12 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbarkayit"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
         android:layout_marginStart="5sp"
         android:layout_marginTop="151dp"
         android:layout_marginEnd="50sp"
-        android:hint="@string/kullaniciadi" />
+        android:fontFamily="sans-serif-black"
+        android:hint="@string/kullaniciadi"
 
+        />
 
     <EditText
 
@@ -56,10 +47,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtkullaniciK"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="5sp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="50sp"
-        android:hint="ŞİFRE"
+        android:fontFamily="sans-serif-black"
+        android:hint="Şifrenizi girin"
         android:inputType="textPassword" />
 
 
@@ -69,14 +62,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtsifreK"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="5sp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="50sp"
-        android:hint="mail"
+        android:hint="Mail adresinizi girin"
         android:inputType="textEmailAddress"
-
-
-
+        android:fontFamily="sans-serif-black"
         />
 
     <Button

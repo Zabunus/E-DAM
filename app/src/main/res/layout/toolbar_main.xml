@@ -6,8 +6,16 @@
     android:background="@color/fransız_mavisi"
     android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
     android:id="@+id/toolbar"
-    android:fontFamily="sans-serif-black"
-
     >
+    <TextView
+        android:id="@+id/kAdiBaslik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+
+        />
 
 </androidx.appcompat.widget.Toolbar>

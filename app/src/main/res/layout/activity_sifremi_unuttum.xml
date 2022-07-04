@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SifremiUnuttumActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar2" />
+
+    <TextView
+
+        android:id="@+id/SifreRsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kayıtlı mail adresinizi girin"
+        android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="150sp"
+
+        />
+
+    <EditText
+
+        android:id="@+id/SifreRstEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SifreRsTxt"
+        android:layout_marginTop="50dp"
+        android:hint="Kayıtlı mail adresinizi girin"
+
+
+
+        />
+
+    <Button
+        android:id="@+id/sifremiUnuttumBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SifreRstEdt"
+        android:layout_centerHorizontal="true"
+        android:text="ŞİFREYİ GÖNDER"
+
+        app:cornerRadius="500dp" />
+</RelativeLayout>

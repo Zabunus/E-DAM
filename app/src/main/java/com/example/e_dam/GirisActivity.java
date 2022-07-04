@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ public class GirisActivity extends AppCompatActivity {
 
 
         private EditText txtmail,txtsifre;
+        private TextView sifremiUnuttumBtn;
         private Button btnGiris;
 
         private FirebaseAuth auth;
@@ -43,9 +45,7 @@ public class GirisActivity extends AppCompatActivity {
             txtsifre =(EditText) findViewById(R.id.sifregirisG);
 
             btnGiris=(Button) findViewById(R.id.btnGirisG);
-
-
-
+            sifremiUnuttumBtn = findViewById(R.id.sifremiUnuttumBtn);
 
         }
 
@@ -61,6 +61,12 @@ public class GirisActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 kullaniciGiris();
+            }
+        });
+        sifremiUnuttumBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GirisActivity.this, SifremiUnuttumActivity.class));
             }
         });
 
@@ -94,6 +100,8 @@ public class GirisActivity extends AppCompatActivity {
                             Toast.makeText(GirisActivity.this,"giriş başarısız",Toast.LENGTH_LONG).show();
 
                         }
+
+
 
                     }
                 });

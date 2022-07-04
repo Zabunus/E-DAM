@@ -18,8 +18,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbargiris"
         android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-black"
         android:text="Hesabınızla Giriş Yapın"
         android:textSize="23dp"
+        android:layout_centerHorizontal="true"
 
         />
 
@@ -31,9 +33,10 @@
         android:layout_marginStart="5sp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="50sp"
+        android:fontFamily="sans-serif-black"
         android:text="E-mail"
-        android:textColor="@color/black"
         android:textSize="23dp"
+        android:layout_centerHorizontal="true"
 
 
         />
@@ -45,23 +48,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/girismailG"
-        android:layout_marginStart="5sp"
+        android:layout_centerHorizontal="true"
 
+        android:layout_marginStart="5sp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="50sp"
+        android:fontFamily="sans-serif-black"
         android:hint="E-mail "
-        android:inputType="textEmailAddress"
-         />
+        android:inputType="textEmailAddress" />
+
     <TextView
         android:id="@+id/txtsifreG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/girismailG"
+        android:layout_marginStart="5sp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="50sp"
+        android:fontFamily="sans-serif-black"
         android:text="Şifre"
         android:textSize="23dp"
-        android:layout_marginStart="5sp"
-        android:layout_marginEnd="50sp"
+        android:layout_centerHorizontal="true"
+
 
         />
 
@@ -75,6 +83,7 @@
         android:layout_marginEnd="50sp"
         android:hint="Şifre"
         android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
 
         />
 
@@ -86,11 +95,21 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:backgroundTint="@color/ACIK_MAVİ1"
-
-
         android:text="GİRİŞ YAP"
         app:cornerRadius="@dimen/browser_actions_context_menu_max_width"
 
         />
+
+    <TextView
+        android:id="@+id/sifremiUnuttumBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGirisG"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Şifremi unuttum."
+        android:textColor="@color/fransız_mavisi" />
+
 
 </RelativeLayout>

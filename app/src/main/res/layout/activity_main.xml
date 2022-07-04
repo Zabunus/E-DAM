@@ -9,17 +9,7 @@
     android:padding="20dp"
     >
 
-    <TextView
-        android:id="@+id/yazi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        android:text="@string/e_dam"
-        android:textColor="@color/white"
-        android:textSize="50sp"
 
-        />
 
     <Button
         android:id="@+id/kayit"
@@ -31,7 +21,7 @@
         android:text="@string/yeni_hesap_olustur"
 
 
-        />
+        app:cornerRadius="500dp" />
 
     <Button
         android:id="@+id/giris"
@@ -43,12 +33,21 @@
         android:text="@string/hesabim_var"
 
 
-        />
+        app:cornerRadius="500dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+
+        android:layout_width="304dp"
+        android:layout_height="201dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/logo" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/yazi"
+        android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/ACIK_MAVİ1"

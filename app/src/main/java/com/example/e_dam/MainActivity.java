@@ -41,4 +41,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Ozellikler.cevrimiciDurumunuDegistir(false);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Ozellikler.cevrimiciDurumunuDegistir(true);
+    }
 }

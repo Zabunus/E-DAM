@@ -17,6 +17,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class kayitActivity extends AppCompatActivity {
 
@@ -40,29 +45,20 @@ public class kayitActivity extends AppCompatActivity {
         txtemail= (EditText) findViewById(R.id.txtmailK);
         txtsifre= (EditText) findViewById(R.id.txtsifreK);
         btnKayit =(Button) findViewById(R.id.btnkayitK);
-
-
-
     }
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kayit);
         init();
-
         btnKayit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 yenihespolustur();
-
             }
         });
     }
     private void yenihespolustur() {
-
         String kullaniciadi = txtkulalniciadi.getText().toString();
         String email =txtemail.getText().toString();
         String sifre=txtsifre.getText().toString();
@@ -78,6 +74,8 @@ public class kayitActivity extends AppCompatActivity {
 
             Toast.makeText(this,"ŞİFRE ALANI BOŞ OLAMAZ",Toast.LENGTH_LONG).show();
 
+        } else  if(kullaniciadi.length() < 3){
+            Toast.makeText(this,"KULLANICI ADI EN AZ 3 KARAKTER OLMALI.",Toast.LENGTH_LONG).show();
         }
 
         else {
@@ -87,6 +85,16 @@ public class kayitActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
                     if (task.isSuccessful()){
+                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference(Veritabani.kullanicilar).child(task.getResult().getUser().getUid());
+                        Map<String, Object> kullaniciMap = new HashMap<>();
+
+                        // Add some vehicles.
+                        kullaniciMap.put("id", task.getResult().getUser().getUid());
+                        kullaniciMap.put("email", email);
+                        kullaniciMap.put("kullaniciAdi", kullaniciadi.toLowerCase());
+                        kullaniciMap.put("cevrimici", false);
+                        kullaniciMap.put("sonGorulme", System.currentTimeMillis());
+                        databaseReference.updateChildren(kullaniciMap);
                         Toast.makeText(kayitActivity.this,"BAŞARILI",Toast.LENGTH_LONG).show();
                         Intent girisintent = new Intent(kayitActivity.this, GirisActivity.class);
                         startActivity(girisintent);
